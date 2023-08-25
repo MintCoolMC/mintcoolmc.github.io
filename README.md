@@ -1,4 +1,3 @@
-# mintraspberry.cool  
-# mintcoolmc.github.io
+# mintraspberry.cool
 
 _work in progress_
