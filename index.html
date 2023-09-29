@@ -4,14 +4,27 @@
     </head>
     <body style="display: flex;justify-content: center;align-items: center;">
         <img id="coolpic-random" src="/coolpic/20percent.jpg">
+        <a id="awesome-href" href="/awesome">
+            <img src="/awesome/awesome.png">
+        </a>
     </body>
     <script>
         var coolpics = [
             "/coolpic/iat89zd0qgo91.png",
+            "/awesome/awesome.png",
             "/coolpic/20percent.jpg"
         ];
+
         var coolpic = document.getElementById("coolpic-random");
+        var awesomepic = document.getElementById("awesome-href");
         var index = Math.floor(Math.random() * coolpics.length);
+
+        awesomepic.style = "display: none;"
+        if (coolpics[index]=="/awesome/awesome.png") {
+            coolpic.style = "display: none;"
+            awesomepic.style = "";
+        }
+
         coolpic.src = coolpics[index];
     </script>
 </html>
