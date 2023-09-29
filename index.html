@@ -14,17 +14,17 @@
             "/awesome/awesome.png",
             "/coolpic/20percent.jpg"
         ];
-
         var coolpic = document.getElementById("coolpic-random");
         var awesomepic = document.getElementById("awesome-href");
         var index = Math.floor(Math.random() * coolpics.length);
-
         awesomepic.style = "display: none;"
         if (coolpics[index]=="/awesome/awesome.png") {
             coolpic.style = "display: none;"
             awesomepic.style = "";
         }
-
         coolpic.src = coolpics[index];
+        if (Math.floor(Math.random() * 8) == 3) {
+            window.location.assign(window.location.href + "awesome");
+        }
     </script>
 </html>
