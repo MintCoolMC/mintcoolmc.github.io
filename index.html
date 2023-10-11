@@ -3,9 +3,8 @@
         <title>20 percent cooler !!!</title>
     </head>
     <body style="display: flex;justify-content: center;align-items: center;">
-        <img id="coolpic-random" src="/coolpic/20percent.jpg">
-        <a id="awesome-href" href="/awesome">
-            <img src="/awesome/awesome.png">
+        <a id="awesome-href">
+            <img id="coolpic-random" src="/coolpic/20percent.jpg">
         </a>
     </body>
     <script>
@@ -15,12 +14,10 @@
             "/coolpic/20percent.jpg"
         ];
         var coolpic = document.getElementById("coolpic-random");
-        var awesomepic = document.getElementById("awesome-href");
+        var awesomehref = document.getElementById("awesome-href");
         var index = Math.floor(Math.random() * coolpics.length);
-        awesomepic.style = "display: none;"
         if (coolpics[index]=="/awesome/awesome.png") {
-            coolpic.style = "display: none;"
-            awesomepic.style = "";
+            awesomepic.href = "/awesome";
         }
         coolpic.src = coolpics[index];
         if (Math.floor(Math.random() * 100) == 17) {
